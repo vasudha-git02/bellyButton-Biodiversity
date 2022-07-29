@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    p {
+      color: rgba(7, 1, 27, 0.984);
+      text-indent: 80px;
+      display:block;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    </style>
+</head>
+
+<body class="bg-dark">
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 jumbotron text-center" style="background: url(./Images/img.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" >
+        <h1 style="color: white;">Belly Button Biodiversity Dashboard</h1>
+        <h2 style="color: white;">Use the interactive charts below to explore the dataset</h2>
+        <h3 style="color: whitesmoke;">CHECK OUT!</h3>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="container">
+        <div class="col-md-12">
+          <div class="article-p">
+            <p>Many bacterial species are not well studied and
+              more remain unknown to science. The human body is a source of thousands of types
+              of bacteria, and different parts of the body harbor different species. Bacteria found in the gut are not the same species that are 
+              found on a person's eyelashes for example. Furthermore, between individuals the bacterial species may vary even in the same location.
+              Roza biological researcher in a prominent  microbiology laboratory, is interested 
+              in bacterial species that have ability to synthesize proteins that taste like beef. She
+              hypothesizes that the ideal bacterial species to make synthetic beef, 
+              may be found in the belly button, or atleast in someone's 
+              belly button. To test her hypothesis, Roza has sampled the navels of people across the country to identify bacterial species that
+              colonize our belly buttons. Each person's identity is anonymous. They've instead been assigned an ID number. 
+              In this website people can select their ID numbers to see which bacterial species live in their navels
+            </p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
